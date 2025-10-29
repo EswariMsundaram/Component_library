@@ -27,22 +27,27 @@ function App() {
   return (
     <main className="bg-stone-900  text-black h-full p-5 ">
       <section>
-        <AlertBox
+        <div className="m-4">
+          <AlertBox
           type="success"
           message="Your profile has been updated successfully!"
           onClose={() => alert("Alert closed")}
         >
           <p className="text-sm text-left mt-6">You can now continue using the application.</p>
         </AlertBox>
+        </div>
 
-        <AlertBox
+        <div className="m-4">
+          <AlertBox
           type="warning"
           message="Attention needed."
           onClose={() => alert("Alert closed")}
         >
           <p className="text-sm text-left mt-6">You can now continue using the application.</p>
         </AlertBox>
-
+        </div>
+        
+         <div className="m-4">
         <AlertBox
           type="error"
           message="Your profile has an error."
@@ -50,7 +55,9 @@ function App() {
         >
           <p className="text-sm text-left mt-6">You can now continue using the application.</p>
         </AlertBox>
+        </div>
 
+        <div className="m-4">
         <AlertBox
           type="info"
           message="Info"
@@ -58,8 +65,11 @@ function App() {
         >
           <p className="text-sm text-left mt-6">You can now continue using the application.</p>
         </AlertBox>
+        </div>
       </section>
+
       <section>
+        <div className="m-4">
         <UserProfileCard
           user={user1}
           showEmail={user1.email}
@@ -68,6 +78,7 @@ function App() {
         >
           {/* <div className="text-sm text-black">Last login: 2 hours ago</div> */}
         </UserProfileCard>
+        </div>
       </section>
 
       <section >

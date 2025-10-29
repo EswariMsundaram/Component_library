@@ -31,7 +31,8 @@ function UserProfileCard(props:UserProfileCardProps){
                 <div className="text-sm pb-4  pl-2">{showRole}</div>
           
               <button onClick= {()=>onEdit && onEdit(user.id)} 
-              className="absolute bottom-25 left-50 rounded-lg p-2 bg-blue-500 md:items-center text-white hover:text-gray-700 self-center md:self-start w-85 mx-auto md:mx-0">
+              className="absolute bottom-5 left-55 rounded-lg p-2 bg-blue-500 md:items-center text-white 
+              hover:text-gray-700 self-center md:self-start w-85 mx-auto md:mx-0">
                      Edit
               </button>
              
