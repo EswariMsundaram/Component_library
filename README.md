@@ -1,75 +1,24 @@
-# React + TypeScript + Vite
+##Components##
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**AlertBox** Success, Error, Warning, Info differenting with colors and a click event on close button.
 
-Currently, two official plugins are available:
+**UserProfileCard**  UserProfile card has user image, name, email and role with the clickable edit button using user id.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**ProductDisplay**  Product Display display the product image, name, price, description of the product, stock if in stock or out of stock and a clickable button to Add to cart.
 
-## React Compiler
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+##Reflections##
 
-Note: This will impact Vite dev & build performances.
+**How did you handle optional props in your components?**
+Extracted the values from props using a local variable and by exporting the interface and a components to the parent App.tsx
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+**What considerations did you make when designing the component interfaces?**
+The main consideration while designing the component is in which order the data should be displayed in the browser and how. Which elements to use and how the data can be fetched.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+**How did you ensure type safety across your components?**
+Used Type Annotation, interfaces type, tsconfig.json that checks type strictly.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+**What challenges did you face when implementing component composition?**
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Implementing the props was little confusing initially how and where to use. Then going through the lessons, examples and the activity we worked in class was really helpful to implement this lab and also styling userprofile card was also challenging to align the contents in the card. With lot of practicing and trying different things, made this lab successful.
