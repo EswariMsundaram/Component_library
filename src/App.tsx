@@ -77,8 +77,8 @@ function App() {
         <div className="m-4">
           <UserProfileCard
             user={user1}
-            showEmail={user1.email}
-            showRole={user1.role}
+            showEmail={true}
+            showRole={true}
             onEdit={(userId) => alert(`Editing user ${userId}`)}
           >
           
